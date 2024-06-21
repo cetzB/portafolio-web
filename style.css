@@ -1,0 +1,137 @@
+/* Configuration General */
+:root {
+    --primary-color: #003087;
+    --secondary-color: #0070e0;
+    --text-color: #fff;
+    --border-color: #aaa;
+    --font-family: 'PaypalOpen', Arial, Helvetica, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--primary-color);
+    font-family: var(--font-family);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#center-window {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+#container {
+    background-color: var(--text-color);
+    min-height: 140px;
+    min-width: 600px;
+    padding: 1.5rem 1.3rem;
+    border-radius: 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Header Window */
+#head {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+#head h1 {
+    font-size: 1.2rem;
+}
+
+#head h3 {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+}
+
+#logo {
+    background-image: url(img/paypal-logo.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 50px;
+    display: block;
+}
+
+/* Buttons Section */
+.buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+}
+
+.buttons button {
+    border-radius: 6px;
+    border: none;
+    min-width: 115px;
+    min-height: 40px;
+    font-size: 0.8rem;
+    border: 1px solid var(--border-color);
+    cursor: pointer;
+}
+
+.buttons button:hover{
+    opacity: 0.7;
+}
+
+.buttons button:first-child{
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+}
+
+.buttons button:last-child{
+    background-color: var(--text-color);
+}
+
+
+@media only screen and (max-width: 700px) {
+    #container {
+        min-width: 85%;
+        min-height: 150px;
+    }
+    .buttons button {
+        min-width: 80px;
+        min-height: 35px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    body {
+        overflow: hidden;
+    }
+
+    #container {
+        min-width: 85%;
+        min-height: 170px;
+        padding: 1rem;
+    }
+
+    #logo {
+        width: 40px;
+        height: 40px;
+    }
+
+    .buttons {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.5rem;
+    }
+
+    .buttons button {
+        min-width: 100%;
+        min-height: 32px;
+    }
+}
