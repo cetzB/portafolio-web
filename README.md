@@ -1,2 +1,5 @@
 # portafolio-web
 Portafolio de proyectos BackEnd y FrontEnd Web
+
+#Descripción
+Portafolio personal con múltiples proyectos individuales tanto FrontEnd como BackEnd con el objetivo de demostrar mis conocimientos adquiridos en el rubtp de desarrollo web.
